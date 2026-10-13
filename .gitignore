@@ -1,35 +1,53 @@
-# Gradle files
+### Android ###
+*.iml
 .gradle/
-build/
-.kotlin/
-
-# Local configuration file (sdk path, etc)
-local.properties
-
-# Log/OS Files
-*.log
-
-# Android Studio generated files and folders
-captures/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/captures/
 .externalNativeBuild/
 .cxx/
-*.aab
 *.apk
-output-metadata.json
+*.aab
+*.ap_
 
-# IntelliJ
-*.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
-
-# Keystore files
+### Sensitive / secrets — NEVER commit these ###
+app/google-services.json
+keystore/
 *.jks
 *.keystore
+*.pfx
+.env
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
+### Gradle ###
+.gradle
+build/
+**/build/
+gradle-app.setting
+!gradle-wrapper.jar
+.gradletasknamecache
 
-# Android Profiling
-*.hprof
+### IntelliJ IDEA / Android Studio ###
+*.iws
+out/
+.idea/
+*.ipr
+atlassian-ide-plugin.xml
+com_crashlytics_export_strings.xml
+crashlytics-build.properties
+fabric.properties
+
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### Windows ###
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+### Kotlin ###
+*.class

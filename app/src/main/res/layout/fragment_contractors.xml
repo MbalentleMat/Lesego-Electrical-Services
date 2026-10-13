@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/background_dark">
+    <!-- Search -->
+    <androidx.appcompat.widget.SearchView android:id="@+id/searchView"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/white" android:queryHint="@string/search_contractors"/>
+    <!-- Filters row -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="8dp">
+        <Spinner android:id="@+id/spinnerArea" android:layout_width="0dp"
+            android:layout_height="40dp" android:layout_weight="1" android:layout_marginEnd="4dp"
+            android:background="@drawable/bg_input_spinner" android:popupBackground="@color/white"/>
+        <Spinner android:id="@+id/spinnerSpecialty" android:layout_width="0dp"
+            android:layout_height="40dp" android:layout_weight="1" android:layout_marginStart="4dp"
+            android:background="@drawable/bg_input_spinner" android:popupBackground="@color/white"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnSearch"
+            style="@style/Widget.LesesoElectrical.Button.Primary"
+            android:layout_width="wrap_content" android:layout_height="40dp"
+            android:text="Go" android:layout_marginStart="4dp" android:textSize="12sp"/>
+    </LinearLayout>
+    <ProgressBar android:id="@+id/progressBar" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_gravity="center"
+        android:visibility="gone" android:indeterminateTint="@color/primary"/>
+    <TextView android:id="@+id/tvNoContractors" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="No contractors found."
+        android:textColor="@color/text_muted" android:gravity="center"
+        android:padding="32dp" android:visibility="gone"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvContractors"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:paddingTop="4dp" android:paddingBottom="80dp" android:clipToPadding="false"/>
+</LinearLayout>

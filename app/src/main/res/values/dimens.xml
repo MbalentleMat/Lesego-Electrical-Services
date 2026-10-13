@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Standard spacing scale -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+
+    <!-- Card corners -->
+    <dimen name="card_corner_radius">12dp</dimen>
+    <dimen name="button_corner_radius">8dp</dimen>
+    <dimen name="chip_corner_radius">16dp</dimen>
+
+    <!-- Typography -->
+    <dimen name="text_xs">10sp</dimen>
+    <dimen name="text_sm">12sp</dimen>
+    <dimen name="text_body">14sp</dimen>
+    <dimen name="text_body_lg">16sp</dimen>
+    <dimen name="text_subtitle">18sp</dimen>
+    <dimen name="text_title">22sp</dimen>
+    <dimen name="text_heading">28sp</dimen>
+    <dimen name="text_display">36sp</dimen>
+
+    <!-- Component heights -->
+    <dimen name="button_height">52dp</dimen>
+    <dimen name="input_height">56dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="bottom_nav_height">72dp</dimen>
+    <dimen name="hero_height">220dp</dimen>
+    <dimen name="service_card_height">130dp</dimen>
+    <dimen name="contractor_photo_height">140dp</dimen>
+
+    <!-- Bottom content padding (so content isn't hidden behind bottom nav) -->
+    <dimen name="bottom_padding">80dp</dimen>
+
+    <!-- Page margins -->
+    <dimen name="page_margin">16dp</dimen>
+    <dimen name="page_margin_lg">24dp</dimen>
+</resources>

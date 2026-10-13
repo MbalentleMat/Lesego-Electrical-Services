@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background_dark">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+        <!-- Office info card -->
+        <com.google.android.material.card.MaterialCardView style="@style/Widget.LesesoElectrical.Card"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Get In Touch" android:textColor="@color/accent_purple"
+                    android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="12dp"/>
+                <TextView android:id="@+id/tvAddress" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="@string/office_address"
+                    android:textColor="@color/text_light" android:textSize="14sp"
+                    android:layout_marginBottom="8dp" android:padding="4dp"/>
+                <TextView android:id="@+id/tvPhone1" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="General: @string/general_inquiries"
+                    android:textColor="@color/accent_purple" android:textSize="14sp"
+                    android:layout_marginBottom="4dp" android:padding="4dp"/>
+                <TextView android:id="@+id/tvPhone2" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="Emergency: @string/emergency_line"
+                    android:textColor="@color/error_red" android:textSize="14sp"
+                    android:textStyle="bold" android:layout_marginBottom="8dp" android:padding="4dp"/>
+                <TextView android:id="@+id/tvEmail" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="@string/email_info"
+                    android:textColor="@color/accent_purple" android:textSize="14sp" android:padding="4dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <!-- Message form -->
+        <com.google.android.material.textfield.TextInputLayout style="@style/Widget.LesesoElectrical.TextInput"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Your Name" android:layout_marginBottom="12dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etContactName"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPersonName" android:textColor="@color/text_light"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout style="@style/Widget.LesesoElectrical.TextInput"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Email Address" android:layout_marginBottom="12dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etContactEmail"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" android:textColor="@color/text_light"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout style="@style/Widget.LesesoElectrical.TextInput"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Phone Number" android:layout_marginBottom="12dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etContactPhone"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="phone" android:textColor="@color/text_light"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Spinner android:id="@+id/spinnerService" android:layout_width="match_parent"
+            android:layout_height="48dp" android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_input_spinner" android:popupBackground="@color/surface_dark"/>
+        <com.google.android.material.textfield.TextInputLayout style="@style/Widget.LesesoElectrical.TextInput"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Your Message" android:layout_marginBottom="20dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etMessage"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textMultiLine" android:minLines="4" android:textColor="@color/text_light"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnSendMessage"
+            style="@style/Widget.LesesoElectrical.Button.Primary"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:text="@string/send_message"/>
+        <ProgressBar android:id="@+id/progressBar" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_gravity="center"
+            android:visibility="gone" android:indeterminateTint="@color/primary"
+            android:layout_margin="8dp"/>
+        <Space android:layout_width="match_parent" android:layout_height="80dp"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,33 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="14dp" app:cardBackgroundColor="#FFFFFF" app:cardCornerRadius="16dp" app:strokeColor="#B91C1C" app:strokeWidth="2dp" app:cardElevation="2dp">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+    <TextView android:id="@+id/tvBookingService" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#1C232D" android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+    <TextView android:id="@+id/tvBookingReference" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#47505E" android:textSize="13sp" android:layout_marginBottom="8dp"/>
+    <TextView android:id="@+id/tvBookingDate" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#1C232D" android:textSize="14sp" android:layout_marginBottom="8dp"/>
+    <TextView android:id="@+id/tvBookingAddress" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#47505E" android:textSize="14sp" android:layout_marginBottom="12dp"/>
+    <TextView android:id="@+id/tvBookingStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#92400E" android:textSize="14sp" android:textStyle="bold"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BOOKING PROGRESS" android:textColor="#47505E" android:textSize="11sp" android:textStyle="bold" android:layout_marginBottom="10dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="8dp" android:orientation="horizontal">
+            <View android:id="@+id/progressPending" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="#D1D5DB"/>
+            <View android:id="@+id/progressConfirmed" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="4dp" android:background="#D1D5DB"/>
+            <View android:id="@+id/progressInProgress" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="4dp" android:background="#D1D5DB"/>
+            <View android:id="@+id/progressCompleted" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="4dp" android:background="#D1D5DB"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="6dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Pending" android:textColor="#47505E" android:textSize="10sp"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Confirmed" android:textColor="#47505E" android:textSize="10sp"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="In Progress" android:textColor="#47505E" android:textSize="10sp"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Completed" android:textColor="#47505E" android:textSize="10sp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnRateElectrician" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Rate Electrician" android:textAllCaps="false" android:textColor="#FFFFFF" android:visibility="gone" app:backgroundTint="#6D28D9" app:cornerRadius="10dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="12dp">
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnCancelBooking" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" android:minHeight="48dp" android:text="Cancel Booking" android:textAllCaps="false" android:textColor="#FFFFFF" android:textSize="12sp" app:backgroundTint="#B91C1C" app:cornerRadius="10dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnRescheduleBooking" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="4dp" android:minHeight="48dp" android:text="Reschedule" android:textAllCaps="false" android:textColor="#FFFFFF" android:textSize="12sp" app:backgroundTint="#1D4ED8" app:cornerRadius="10dp"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="4dp">
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnViewQuotation" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" android:minHeight="48dp" android:text="View Quotation" android:textAllCaps="false" android:textColor="#FFFFFF" android:textSize="12sp" app:backgroundTint="#6D28D9" app:cornerRadius="10dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnMessageElectrician" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="4dp" android:minHeight="48dp" android:text="Message Electrician" android:textAllCaps="false" android:textColor="#FFFFFF" android:textSize="12sp" app:backgroundTint="#15803D" app:cornerRadius="10dp"/>
+    </LinearLayout>
+</LinearLayout>
+    </com.google.android.material.card.MaterialCardView>

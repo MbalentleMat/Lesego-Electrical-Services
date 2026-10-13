@@ -1,0 +1,308 @@
+{
+  "services": [
+    {
+      "id": "service-01",
+      "title": "Electrical fault finding",
+      "description": "Professional electrical fault finding service. Final quote after assessment.",
+      "category": "commercial",
+      "priceFrom": 475.0,
+      "isAvailable": true
+    },
+    {
+      "id": "service-02",
+      "title": "DB board inspection",
+      "description": "Professional db board inspection service. Final quote after assessment.",
+      "category": "maintenance",
+      "priceFrom": 600.0,
+      "isAvailable": true
+    },
+    {
+      "id": "service-03",
+      "title": "Plug installation",
+      "description": "Professional plug installation service. Final quote after assessment.",
+      "category": "solar",
+      "priceFrom": 725.0,
+      "isAvailable": true
+    },
+    {
+      "id": "service-04",
+      "title": "Lighting installation",
+      "description": "Professional lighting installation service. Final quote after assessment.",
+      "category": "residential",
+      "priceFrom": 850.0,
+      "isAvailable": true
+    },
+    {
+      "id": "service-05",
+      "title": "Home rewiring",
+      "description": "Professional home rewiring service. Final quote after assessment.",
+      "category": "commercial",
+      "priceFrom": 975.0,
+      "isAvailable": true
+    },
+    {
+      "id": "service-06",
+      "title": "Generator installation",
+      "description": "Professional generator installation service. Final quote after assessment.",
+      "category": "maintenance",
+      "priceFrom": 1100.0,
+      "isAvailable": true
+    },
+    {
+      "id": "service-07",
+      "title": "Solar panel inspection",
+      "description": "Professional solar panel inspection service. Final quote after assessment.",
+      "category": "solar",
+      "priceFrom": 1225.0,
+      "isAvailable": true
+    },
+    {
+      "id": "service-08",
+      "title": "Inverter maintenance",
+      "description": "Professional inverter maintenance service. Final quote after assessment.",
+      "category": "residential",
+      "priceFrom": 1350.0,
+      "isAvailable": true
+    },
+    {
+      "id": "service-09",
+      "title": "Commercial wiring",
+      "description": "Professional commercial wiring service. Final quote after assessment.",
+      "category": "commercial",
+      "priceFrom": 1475.0,
+      "isAvailable": true
+    },
+    {
+      "id": "service-10",
+      "title": "Emergency electrical repair",
+      "description": "Professional emergency electrical repair service. Final quote after assessment.",
+      "category": "maintenance",
+      "priceFrom": 1600.0,
+      "isAvailable": true
+    }
+  ],
+  "contractors": [
+    {
+      "id": "contractor-01",
+      "name": "Lerato Mokoena",
+      "specialty": "Electrical fault finding",
+      "location": "Pretoria",
+      "yearsExperience": 3,
+      "licenseNumber": "DEMO-0001",
+      "rating": 4.0,
+      "phone": "",
+      "email": "",
+      "bio": "Demonstration record \u2014 replace with verified contractor details",
+      "isAvailable": true
+    },
+    {
+      "id": "contractor-02",
+      "name": "Thabo Dlamini",
+      "specialty": "DB board inspection",
+      "location": "Centurion",
+      "yearsExperience": 4,
+      "licenseNumber": "DEMO-0002",
+      "rating": 4.0,
+      "phone": "",
+      "email": "",
+      "bio": "Demonstration record \u2014 replace with verified contractor details",
+      "isAvailable": true
+    },
+    {
+      "id": "contractor-03",
+      "name": "Nomsa Khumalo",
+      "specialty": "Plug installation",
+      "location": "Johannesburg",
+      "yearsExperience": 5,
+      "licenseNumber": "DEMO-0003",
+      "rating": 4.0,
+      "phone": "",
+      "email": "",
+      "bio": "Demonstration record \u2014 replace with verified contractor details",
+      "isAvailable": true
+    },
+    {
+      "id": "contractor-04",
+      "name": "Sipho Nkosi",
+      "specialty": "Lighting installation",
+      "location": "Pretoria",
+      "yearsExperience": 6,
+      "licenseNumber": "DEMO-0004",
+      "rating": 4.0,
+      "phone": "",
+      "email": "",
+      "bio": "Demonstration record \u2014 replace with verified contractor details",
+      "isAvailable": true
+    },
+    {
+      "id": "contractor-05",
+      "name": "Ayanda Molefe",
+      "specialty": "Home rewiring",
+      "location": "Centurion",
+      "yearsExperience": 7,
+      "licenseNumber": "DEMO-0005",
+      "rating": 4.0,
+      "phone": "",
+      "email": "",
+      "bio": "Demonstration record \u2014 replace with verified contractor details",
+      "isAvailable": true
+    },
+    {
+      "id": "contractor-06",
+      "name": "Kabelo Ndlovu",
+      "specialty": "Generator installation",
+      "location": "Johannesburg",
+      "yearsExperience": 8,
+      "licenseNumber": "DEMO-0006",
+      "rating": 4.0,
+      "phone": "",
+      "email": "",
+      "bio": "Demonstration record \u2014 replace with verified contractor details",
+      "isAvailable": true
+    },
+    {
+      "id": "contractor-07",
+      "name": "Palesa Maseko",
+      "specialty": "Solar panel inspection",
+      "location": "Pretoria",
+      "yearsExperience": 9,
+      "licenseNumber": "DEMO-0007",
+      "rating": 4.0,
+      "phone": "",
+      "email": "",
+      "bio": "Demonstration record \u2014 replace with verified contractor details",
+      "isAvailable": true
+    },
+    {
+      "id": "contractor-08",
+      "name": "Tshepo Sithole",
+      "specialty": "Inverter maintenance",
+      "location": "Centurion",
+      "yearsExperience": 10,
+      "licenseNumber": "DEMO-0008",
+      "rating": 4.0,
+      "phone": "",
+      "email": "",
+      "bio": "Demonstration record \u2014 replace with verified contractor details",
+      "isAvailable": true
+    },
+    {
+      "id": "contractor-09",
+      "name": "Zanele Mthembu",
+      "specialty": "Commercial wiring",
+      "location": "Johannesburg",
+      "yearsExperience": 11,
+      "licenseNumber": "DEMO-0009",
+      "rating": 4.0,
+      "phone": "",
+      "email": "",
+      "bio": "Demonstration record \u2014 replace with verified contractor details",
+      "isAvailable": true
+    },
+    {
+      "id": "contractor-10",
+      "name": "Mpho Radebe",
+      "specialty": "Emergency electrical repair",
+      "location": "Pretoria",
+      "yearsExperience": 12,
+      "licenseNumber": "DEMO-0010",
+      "rating": 4.0,
+      "phone": "",
+      "email": "",
+      "bio": "Demonstration record \u2014 replace with verified contractor details",
+      "isAvailable": true
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job-01",
+      "title": "Electrical fault finding technician",
+      "type": "contract",
+      "location": "Gauteng",
+      "description": "Demonstration vacancy \u2014 not an actual employment offer",
+      "salaryRange": "To be confirmed",
+      "postedAt": "2026-10-01"
+    },
+    {
+      "id": "job-02",
+      "title": "DB board inspection technician",
+      "type": "contract",
+      "location": "Gauteng",
+      "description": "Demonstration vacancy \u2014 not an actual employment offer",
+      "salaryRange": "To be confirmed",
+      "postedAt": "2026-10-01"
+    },
+    {
+      "id": "job-03",
+      "title": "Plug installation technician",
+      "type": "contract",
+      "location": "Gauteng",
+      "description": "Demonstration vacancy \u2014 not an actual employment offer",
+      "salaryRange": "To be confirmed",
+      "postedAt": "2026-10-01"
+    },
+    {
+      "id": "job-04",
+      "title": "Lighting installation technician",
+      "type": "contract",
+      "location": "Gauteng",
+      "description": "Demonstration vacancy \u2014 not an actual employment offer",
+      "salaryRange": "To be confirmed",
+      "postedAt": "2026-10-01"
+    },
+    {
+      "id": "job-05",
+      "title": "Home rewiring technician",
+      "type": "contract",
+      "location": "Gauteng",
+      "description": "Demonstration vacancy \u2014 not an actual employment offer",
+      "salaryRange": "To be confirmed",
+      "postedAt": "2026-10-01"
+    },
+    {
+      "id": "job-06",
+      "title": "Generator installation technician",
+      "type": "contract",
+      "location": "Gauteng",
+      "description": "Demonstration vacancy \u2014 not an actual employment offer",
+      "salaryRange": "To be confirmed",
+      "postedAt": "2026-10-01"
+    },
+    {
+      "id": "job-07",
+      "title": "Solar panel inspection technician",
+      "type": "contract",
+      "location": "Gauteng",
+      "description": "Demonstration vacancy \u2014 not an actual employment offer",
+      "salaryRange": "To be confirmed",
+      "postedAt": "2026-10-01"
+    },
+    {
+      "id": "job-08",
+      "title": "Inverter maintenance technician",
+      "type": "contract",
+      "location": "Gauteng",
+      "description": "Demonstration vacancy \u2014 not an actual employment offer",
+      "salaryRange": "To be confirmed",
+      "postedAt": "2026-10-01"
+    },
+    {
+      "id": "job-09",
+      "title": "Commercial wiring technician",
+      "type": "contract",
+      "location": "Gauteng",
+      "description": "Demonstration vacancy \u2014 not an actual employment offer",
+      "salaryRange": "To be confirmed",
+      "postedAt": "2026-10-01"
+    },
+    {
+      "id": "job-10",
+      "title": "Emergency electrical repair technician",
+      "type": "contract",
+      "location": "Gauteng",
+      "description": "Demonstration vacancy \u2014 not an actual employment offer",
+      "salaryRange": "To be confirmed",
+      "postedAt": "2026-10-01"
+    }
+  ]
+}

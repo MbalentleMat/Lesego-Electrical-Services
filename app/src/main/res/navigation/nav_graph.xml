@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/myBookingsFragment"
+        android:name="com.lesego.electrical.ui.booking.MyBookingsFragment"
+        android:label="My Bookings" />
+
+    <!-- ── HOME ── -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.lesego.electrical.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action android:id="@+id/action_home_to_booking"
+            app:destination="@id/bookingFragment"/>
+        <action android:id="@+id/actionHomeToServices"
+            app:destination="@id/servicesFragment"/>
+        <action
+            android:id="@+id/actionHomeToContractors"
+            app:destination="@id/contractorsFragment"/>
+    </fragment>
+
+    <!-- ── SERVICES ── -->
+    <fragment
+        android:id="@+id/servicesFragment"
+        android:name="com.lesego.electrical.ui.services.ServicesFragment"
+        android:label="Services"
+        tools:layout="@layout/fragment_services">
+        <argument android:name="category" android:defaultValue=""
+            app:argType="string"/>
+        <action android:id="@+id/actionServicesToBooking"
+            app:destination="@id/bookingFragment"/>
+    </fragment>
+
+    <!-- ── BOOKING ── -->
+    <fragment
+        android:id="@+id/bookingFragment"
+        android:name="com.lesego.electrical.ui.booking.BookingFragment"
+        android:label="Book a Service"
+        tools:layout="@layout/fragment_booking">
+        <argument android:name="serviceId" android:defaultValue=""
+            app:argType="string"/>
+        <argument android:name="serviceName" android:defaultValue=""
+            app:argType="string"/>
+    </fragment>
+
+    <!-- ── CONTRACTORS ── -->
+    <fragment
+        android:id="@+id/contractorsFragment"
+        android:name="com.lesego.electrical.ui.contractors.ContractorsFragment"
+        android:label="Find a Pro"
+        tools:layout="@layout/fragment_contractors"/>
+
+    <!-- ── PROFILE ── -->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.lesego.electrical.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action android:id="@+id/actionProfileToJobs"
+            app:destination="@id/jobsFragment"/>
+        <action android:id="@+id/actionProfileToSupport"
+            app:destination="@id/supportFragment"/>
+        <action android:id="@+id/actionProfileToContact"
+            app:destination="@id/contactFragment"/>
+    </fragment>
+
+    <!-- ── SECONDARY SCREENS (accessible via menu / profile) ── -->
+    <fragment
+        android:id="@+id/jobsFragment"
+        android:name="com.lesego.electrical.ui.jobs.JobsFragment"
+        android:label="Careers"
+        tools:layout="@layout/fragment_jobs"/>
+
+    <fragment
+        android:id="@+id/supportFragment"
+        android:name="com.lesego.electrical.ui.support.SupportFragment"
+        android:label="Support &amp; Help"
+        tools:layout="@layout/fragment_support"/>
+
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.lesego.electrical.ui.contact.ContactFragment"
+        android:label="Contact Us"
+        tools:layout="@layout/fragment_contact"/>
+
+    <!-- ADMIN DASHBOARD -->
+    <fragment
+        android:id="@+id/adminDashboardFragment"
+        android:name="com.lesego.electrical.ui.admin.AdminDashboardFragment"
+        android:label="Admin Dashboard"
+        tools:layout="@layout/fragment_admin_dashboard"/>
+
+
+    <fragment
+        android:id="@+id/contractorDashboardFragment"
+        android:name="com.lesego.electrical.ui.contractors.ContractorDashboardFragment"
+        android:label="Contractor Dashboard" />
+
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.lesego.electrical.ui.notifications.NotificationsFragment"
+        android:label="My Notifications" />
+
+</navigation>

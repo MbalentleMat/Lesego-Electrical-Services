@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background_dark">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- Profile header -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="200dp"
+            android:orientation="vertical" android:gravity="center"
+            android:background="@color/primary_dark" android:padding="20dp">
+            <ImageView android:id="@+id/ivProfilePhoto" android:layout_width="80dp"
+                android:layout_height="80dp" android:src="@drawable/ic_person_placeholder"
+                android:background="@drawable/bg_circle_primary" android:padding="4dp"
+                android:scaleType="centerCrop" android:contentDescription="@string/cd_profile_pic"/>
+            <TextView android:id="@+id/tvUserName" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textColor="@color/text_light"
+                android:textSize="20sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+            <TextView android:id="@+id/tvUserEmail" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textColor="@color/text_muted"
+                android:textSize="13sp"/>
+            <TextView android:id="@+id/tvUserPhone" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textColor="@color/accent_purple"
+                android:textSize="13sp"/>
+        </LinearLayout>
+        <!-- Booking summary card -->
+        <!-- Booking summary card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardMyBookings"
+            style="@style/Widget.LesesoElectrical.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <!-- Customer Notifications Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMyNotifications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="MY NOTIFICATIONS"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#8B5CF6"
+                app:cornerRadius="12dp" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="My Bookings" android:textColor="@color/accent_purple"
+                    android:textSize="15sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/tvBookingCount" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textColor="@color/text_light"
+                    android:textSize="22sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/tvBookingSummary" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textColor="@color/text_muted" android:textSize="12sp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/btnAdminDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="ADMIN DASHBOARD"
+            android:textColor="#FFFFFF"
+            android:visibility="gone"
+            app:backgroundTint="#8B5CF6"
+            app:cornerRadius="12dp"/>
+
+        <!-- Contractor Dashboard Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnContractorDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="CONTRACTOR DASHBOARD"
+            android:textColor="#FFFFFF"
+            android:visibility="gone"
+            app:backgroundTint="#8B5CF6"
+            app:cornerRadius="12dp" />
+
+
+        <!-- Notification settings -->
+        <com.google.android.material.card.MaterialCardView style="@style/Widget.LesesoElectrical.Card"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/notifications" android:textColor="@color/accent_purple"
+                    android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="12dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="@string/push_notifications"
+                        android:textColor="@color/text_light" android:textSize="14sp"/>
+                    <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchPushNotifications"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:thumbTint="@color/primary" android:trackTint="@color/accent_purple"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="@string/email_notifications"
+                        android:textColor="@color/text_light" android:textSize="14sp"/>
+                    <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchEmailNotifications"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:thumbTint="@color/primary" android:trackTint="@color/accent_purple"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="@string/sms_notifications"
+                        android:textColor="@color/text_light" android:textSize="14sp"/>
+                    <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchSmsNotifications"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:thumbTint="@color/primary" android:trackTint="@color/accent_purple"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <!-- Account actions -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnEditProfile"
+                style="@style/Widget.LesesoElectrical.Button.Outlined"
+                android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="@string/edit_profile" android:layout_marginBottom="8dp"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnChangePassword"
+                style="@style/Widget.LesesoElectrical.Button.Outlined"
+                android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="@string/change_password" android:layout_marginBottom="8dp"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSignOut"
+                style="@style/Widget.LesesoElectrical.Button.Primary"
+                android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="@string/logout" android:layout_marginBottom="8dp"
+                app:backgroundTint="@color/primary_dark"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnDeleteAccount"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="@string/delete_account" android:textColor="@color/error_red"/>
+        </LinearLayout>
+        <Space android:layout_width="match_parent" android:layout_height="80dp"/>
+    </LinearLayout>
+</ScrollView>

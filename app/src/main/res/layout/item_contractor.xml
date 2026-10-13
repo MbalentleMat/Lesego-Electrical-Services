@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.LesesoElectrical.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="12dp">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="0dp">
+
+        <!-- Photo banner -->
+        <ImageView android:id="@+id/ivContractorPhoto"
+            android:layout_width="match_parent" android:layout_height="140dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_person_placeholder"
+            android:contentDescription="@string/cd_contractor_photo"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <!-- Name + specialty -->
+            <TextView android:id="@+id/tvContractorName"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textColor="@color/accent_purple" android:textSize="17sp"
+                android:textStyle="bold"/>
+
+            <TextView android:id="@+id/tvSpecialty"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textColor="@color/accent_orange" android:textSize="13sp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Location + experience -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="4dp">
+
+                <TextView android:id="@+id/tvLocation"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:textColor="@color/text_muted"
+                    android:textSize="12sp"/>
+
+                <TextView android:id="@+id/tvExperience"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/text_muted" android:textSize="12sp"/>
+            </LinearLayout>
+
+            <!-- Rating -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <RatingBar android:id="@+id/ratingBar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:numStars="5" android:stepSize="0.5"
+                    android:isIndicator="true"
+                    android:progressTint="@color/accent_orange"/>
+
+                <TextView android:id="@+id/tvRating"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/accent_orange" android:textSize="13sp"
+                    android:textStyle="bold" android:layout_marginStart="6dp"/>
+
+                <TextView android:id="@+id/tvReviews"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/text_muted" android:textSize="12sp"
+                    android:layout_marginStart="4dp"/>
+            </LinearLayout>
+
+            <!-- License -->
+            <TextView android:id="@+id/tvLicense"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textColor="@color/text_muted" android:textSize="12sp"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Action buttons -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnViewProfile"
+                    style="@style/Widget.LesesoElectrical.Button.Outlined"
+                    android:layout_width="0dp" android:layout_height="40dp"
+                    android:layout_weight="1" android:text="@string/view_profile"
+                    android:textSize="12sp" android:layout_marginEnd="8dp"/>
+
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnHireNow"
+                    style="@style/Widget.LesesoElectrical.Button.Primary"
+                    android:layout_width="0dp" android:layout_height="40dp"
+                    android:layout_weight="1" android:text="@string/hire_now"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

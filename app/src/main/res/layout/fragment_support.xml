@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background_dark">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+        <!-- Search -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.LesesoElectrical.TextInput"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/search_help" android:layout_marginBottom="16dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etSearchHelp"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textColor="@color/text_light" android:imeOptions="actionSearch"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- Search results (shown when filtering) -->
+        <LinearLayout android:id="@+id/layoutSearchResults"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:visibility="gone"/>
+        <!-- FAQ Categories (shown normally) -->
+        <LinearLayout android:id="@+id/groupFaqCategories"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="General Questions" android:textColor="@color/accent_purple"
+                android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+            <LinearLayout android:id="@+id/layoutGeneralFaqs"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:layout_marginBottom="16dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Technical Support" android:textColor="@color/accent_purple"
+                android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+            <LinearLayout android:id="@+id/layoutTechnicalFaqs"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:layout_marginBottom="16dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Billing &amp; Payments" android:textColor="@color/accent_purple"
+                android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+            <LinearLayout android:id="@+id/layoutBillingFaqs"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:layout_marginBottom="16dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Appointments" android:textColor="@color/accent_purple"
+                android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+            <LinearLayout android:id="@+id/layoutAppointmentFaqs"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:layout_marginBottom="16dp"/>
+        </LinearLayout>
+        <!-- Contact shortcuts -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="8dp">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnCallSupport"
+                style="@style/Widget.LesesoElectrical.Button.Outlined"
+                android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1"
+                android:text="📞 Call" android:layout_marginEnd="8dp"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnEmailSupport"
+                style="@style/Widget.LesesoElectrical.Button.Outlined"
+                android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1"
+                android:text="✉ Email" android:layout_marginEnd="8dp"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnEmergencyCall"
+                style="@style/Widget.LesesoElectrical.Button.Primary"
+                android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1"
+                android:text="🚨 SOS"/>
+        </LinearLayout>
+        <Space android:layout_width="match_parent" android:layout_height="80dp"/>
+    </LinearLayout>
+</ScrollView>

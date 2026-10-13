@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#101018"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Admin Dashboard"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lesego Electrical Services"
+            android:textSize="14sp"
+            android:textColor="#BBBBBB"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvAdminTotal"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:background="#29213D"/>
+
+            <TextView
+                android:id="@+id/tvAdminPending"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:background="#29213D"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TOTAL BOOKINGS                                  PENDING"
+            android:textColor="#CCCCCC"
+            android:textSize="10sp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvAdminInProgress"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:background="#29213D"/>
+
+            <TextView
+                android:id="@+id/tvAdminCompleted"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:background="#29213D"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IN PROGRESS                                     COMPLETED"
+            android:textColor="#CCCCCC"
+            android:textSize="10sp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Bookings"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/tvAdminMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:textColor="#BBBBBB"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:id="@+id/adminBookingsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+    </LinearLayout>
+</ScrollView>

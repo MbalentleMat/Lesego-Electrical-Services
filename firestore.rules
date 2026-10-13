@@ -1,0 +1,31 @@
+rules_version = '2';
+service cloud.firestore {
+ match /databases/{database}/documents {
+  function signedIn() { return request.auth != null; }
+  function admin() { return signedIn() && request.auth.token.admin == true; }
+  match /services/{id} { allow read: if true; allow write: if admin(); }
+  match /contractors/{id} { allow read: if true; allow write: if admin(); }
+  match /jobs/{id} { allow read: if true; allow write: if admin(); }
+  match /users/{uid} {
+   allow read: if signedIn() && (request.auth.uid == uid || admin());
+   allow create: if signedIn() && request.auth.uid == uid && request.resource.data.role == 'customer';
+   allow update: if signedIn() && request.auth.uid == uid && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['name','phone','profileImageUrl','notificationsEnabled']) || admin();
+   allow delete: if admin();
+  }
+  match /bookings/{id} {
+   allow read: if signedIn() && (resource.data.userId == request.auth.uid || admin());
+   allow create: if signedIn() && request.resource.data.userId == request.auth.uid
+      && request.resource.data.status == 'pending'
+      && request.resource.data.keys().hasOnly(['userId','serviceId','serviceName','customerName','customerEmail','customerPhone','serviceAddress','preferredDate','preferredTime','notes','status','price','reference','createdAt']);
+   allow update, delete: if admin();
+  }
+  match /inquiries/{id} {
+   allow create: if signedIn() && request.resource.data.userId == request.auth.uid
+      && request.resource.data.status == 'new';
+   allow read: if admin() || (signedIn() && resource.data.userId == request.auth.uid);
+   allow update, delete: if admin();
+  }
+  match /payments/{id} { allow read: if admin() || (signedIn() && resource.data.userId == request.auth.uid); allow write: if admin(); }
+  match /{document=**} { allow read, write: if false; }
+ }
+}

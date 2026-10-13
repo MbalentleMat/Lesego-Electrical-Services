@@ -1,0 +1,81 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/background_dark">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <!--  ── HERO BANNER ─────────────────────────────────────────────  -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="220dp" android:orientation="vertical" android:gravity="center" android:background="@color/primary_dark" android:padding="24dp">
+            <TextView android:id="@+id/tvWelcome" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/welcome_message" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/accent_purple" android:gravity="center" android:layout_marginBottom="8dp"/>
+            <TextView android:id="@+id/tvTagline" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hero_subtitle" android:textSize="12sp" android:textColor="@color/text_muted" android:gravity="center" android:layout_marginBottom="20dp"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnGetQuote" style="@style/Widget.LesesoElectrical.Button.Primary" android:layout_width="wrap_content" android:layout_height="44dp" android:text="@string/get_free_quote" android:paddingStart="28dp" android:paddingEnd="28dp"/>
+        </LinearLayout>
+        <!--  ── OUR SERVICES ────────────────────────────────────────────  -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/our_services" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/accent_purple" android:padding="16dp"/>
+        <androidx.gridlayout.widget.GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" app:columnCount="2" app:rowCount="2">
+            <!--  Residential  -->
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardResidential" style="@style/Widget.LesesoElectrical.Card" android:layout_width="0dp" android:layout_height="130dp" android:layout_margin="8dp" app:layout_columnWeight="1" app:layout_rowWeight="1">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="12dp">
+                    <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_home_elec" android:layout_marginBottom="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/residential" android:textColor="@color/card_border" android:textSize="13sp" android:textStyle="bold" android:gravity="center"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <!--  Commercial  -->
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardCommercial" style="@style/Widget.LesesoElectrical.Card" android:layout_width="0dp" android:layout_height="130dp" android:layout_margin="8dp" app:layout_columnWeight="1" app:layout_rowWeight="1">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="12dp">
+                    <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_business" android:layout_marginBottom="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/commercial" android:textColor="@color/text_light" android:textSize="13sp" android:textStyle="bold" android:gravity="center"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <!--  Solar  -->
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardSolar" style="@style/Widget.LesesoElectrical.Card" android:layout_width="0dp" android:layout_height="130dp" android:layout_margin="8dp" app:layout_columnWeight="1" app:layout_rowWeight="1">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="12dp">
+                    <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_solar" android:layout_marginBottom="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/solar" android:textColor="@color/text_light" android:textSize="13sp" android:textStyle="bold" android:gravity="center"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <!--  Maintenance  -->
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardMaintenance" style="@style/Widget.LesesoElectrical.Card" android:layout_width="0dp" android:layout_height="130dp" android:layout_margin="8dp" app:layout_columnWeight="1" app:layout_rowWeight="1">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="12dp">
+                    <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_wrench" android:layout_marginBottom="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/maintenance" android:textColor="@color/text_light" android:textSize="13sp" android:textStyle="bold" android:gravity="center"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.gridlayout.widget.GridLayout>
+        <!--  ELECTRICIAN BUTTON -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFindContractors"
+            style="@style/Widget.LesesoElectrical.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Find an Electrician"
+            android:textAllCaps="false" />
+        <!--  ── STATS STRIP ─────────────────────────────────────────────  -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@color/surface_dark" android:layout_marginTop="16dp" android:padding="16dp">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="15+" android:textSize="24sp" android:textStyle="bold" android:textColor="@color/accent_orange"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Years" android:textSize="11sp" android:textColor="@color/text_muted"/>
+            </LinearLayout>
+            <View android:layout_width="1dp" android:layout_height="match_parent" android:background="@color/divider"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="50+" android:textSize="24sp" android:textStyle="bold" android:textColor="@color/accent_orange"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Electricians" android:textSize="11sp" android:textColor="@color/text_muted"/>
+            </LinearLayout>
+            <View android:layout_width="1dp" android:layout_height="match_parent" android:background="@color/divider"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5000+" android:textSize="24sp" android:textStyle="bold" android:textColor="@color/accent_orange"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Jobs Done" android:textSize="11sp" android:textColor="@color/text_muted"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!--  ── EMERGENCY BANNER ───────────────────────────────────────  -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@color/error_red" android:layout_marginTop="16dp" android:padding="20dp" android:gravity="center">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/emergency_title" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/white" android:layout_marginBottom="4dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Available around the clock for urgent electrical faults" android:textSize="13sp" android:textColor="#FFEEEE" android:gravity="center" android:layout_marginBottom="12dp"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnCallNow" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="wrap_content" android:layout_height="44dp" android:text="📞 082 123 4567" android:textColor="@color/white" app:strokeColor="@color/white"/>
+        </LinearLayout>
+        <!--  Progress bar  -->
+        <ProgressBar android:id="@+id/progressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:visibility="gone" android:indeterminateTint="@color/primary" android:layout_margin="16dp"/>
+        <Space android:layout_width="match_parent" android:layout_height="80dp"/>
+    </LinearLayout>
+</ScrollView>

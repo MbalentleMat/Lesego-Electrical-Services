@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand Colours (matching website CSS) -->
+    <!-- Primary purple - matching #7B2CBF -->
+    <color name="primary">#7B2CBF</color>
+    <!-- Dark purple nav/header - matching #4B0082 -->
+    <color name="primary_dark">#4B0082</color>
+    <!-- Light accent purple - matching #BB86FC -->
+    <color name="accent_purple">#BB86FC</color>
+    <!-- Very dark near-black bg - matching #0B0B0B -->
+    <color name="background_dark">#0B0B0B</color>
+    <!-- Dark card bg - matching #161616 -->
+    <color name="surface_dark">#161616</color>
+    <!-- Orange accent - matching #FF9900 -->
+    <color name="accent_orange">#FF9900</color>
+    <!-- Gold/yellow from website primary -->
+    <color name="gold">#F0C14B</color>
+    <!-- Light text -->
+    <color name="text_light">#F5F5F5</color>
+    <!-- Muted text -->
+    <color name="text_muted">#AAAAAA</color>
+    <!-- White -->
+    <color name="white">#FFFFFF</color>
+    <!-- Error / Emergency red -->
+    <color name="error_red">#E74C3C</color>
+    <!-- Success green -->
+    <color name="success_green">#2ECC71</color>
+    <!-- Warning orange -->
+    <color name="warning_orange">#F39C12</color>
+    <!-- Card border -->
+    <color name="card_border">#7B2CBF</color>
+    <!-- Divider colour -->
+    <color name="divider">#2A2A2A</color>
+    <!-- Secondary dark navy -->
+    <color name="secondary_dark">#232F3E</color>
+    <!-- Status bar -->
+    <color name="status_bar">#3B0080</color>
+    <!-- Input field background -->
+    <color name="input_bg">#1E1E1E</color>
+    <!-- Ripple / pressed state -->
+    <color name="ripple">#50BB86FC</color>
+    <!-- Bottom nav background -->
+    <color name="bottom_nav_bg">#120828</color>
+</resources>

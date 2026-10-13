@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Purple header bar -->
+        <View
+            android:id="@+id/viewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:background="@color/primary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_bolt"
+            android:layout_marginTop="48dp"
+            app:layout_constraintTop_toBottomOf="@id/viewHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome Back"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_light"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/ivLogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign in to Lesego Electrical Services"
+            android:textSize="14sp"
+            android:textColor="@color/text_muted"
+            android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Email field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmail"
+            style="@style/Widget.LesesoElectrical.TextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:layout_marginTop="32dp"
+            app:startIconDrawable="@drawable/ic_email"
+            app:startIconTint="@color/accent_purple"
+            app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/text_light"
+                android:imeOptions="actionNext"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPassword"
+            style="@style/Widget.LesesoElectrical.TextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:layout_marginTop="12dp"
+            app:startIconDrawable="@drawable/ic_lock"
+            app:startIconTint="@color/accent_purple"
+            app:endIconMode="password_toggle"
+            app:layout_constraintTop_toBottomOf="@id/tilEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="@color/text_light"
+                android:imeOptions="actionDone"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Forgot password -->
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password"
+            android:textColor="@color/accent_purple"
+            android:textSize="13sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tilPassword"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Login button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            style="@style/Widget.LesesoElectrical.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="@string/login"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/tvForgotPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Divider -->
+        <TextView
+            android:id="@+id/tvDivider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="— or continue with —"
+            android:textColor="@color/text_muted"
+            android:textSize="12sp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/btnLogin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Google SSO button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGoogleSignIn"
+            style="@style/Widget.LesesoElectrical.Button.Google"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="@string/sign_in_with_google"
+            android:textSize="15sp"
+            android:layout_marginTop="12dp"
+            app:icon="@drawable/ic_google"
+            app:iconGravity="start"
+            app:iconPadding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvDivider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Register link -->
+        <TextView
+            android:id="@+id/tvRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_account"
+            android:textColor="@color/accent_purple"
+            android:textSize="14sp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintTop_toBottomOf="@id/btnGoogleSignIn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <!-- Progress bar overlay -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:indeterminateTint="@color/primary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

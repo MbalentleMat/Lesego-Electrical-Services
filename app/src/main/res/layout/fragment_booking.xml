@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:fillViewport="true">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- BOOKING FORM WRAPPER -->
+        <LinearLayout android:id="@+id/layoutBookingForm"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="20dp">
+
+            <!-- Step indicator -->
+            <TextView android:id="@+id/stepIndicator"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Step 1 of 3" android:textColor="@color/accent_purple"
+                android:textSize="13sp" android:layout_marginBottom="4dp"/>
+
+            <ProgressBar android:id="@+id/progressSteps"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent" android:layout_height="6dp"
+                android:max="100" android:progress="33"
+                android:progressTint="@color/primary"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- ── STEP 1: Service Selection ── -->
+            <LinearLayout android:id="@+id/layoutStep1"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/select_service" android:textSize="20sp"
+                    android:textStyle="bold" android:textColor="@android:color/white" android:textColorHint="#BDBDBD"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Choose the electrical service you need:"
+                    android:textColor="@android:color/white" android:textSize="13sp" android:textColorHint="#BDBDBD"
+                    android:layout_marginBottom="12dp"/>
+
+                <Spinner android:id="@+id/spinnerService"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/bg_input_spinner"
+                    android:popupBackground="@color/white"
+                    android:padding="12dp"/>
+            </LinearLayout>
+
+            <!-- ── STEP 2: Details & Scheduling ── -->
+            <LinearLayout android:id="@+id/layoutStep2"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:visibility="gone">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/your_details" android:textSize="20sp"
+                    android:textStyle="bold" android:textColor="@color/text_light"
+                    android:layout_marginBottom="16dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilCustomerName"
+                    style="@style/Widget.LesesoElectrical.TextInput"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Full Name" android:layout_marginBottom="12dp">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etCustomerName"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:inputType="textPersonName" android:textColor="@color/text_light"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilCustomerEmail"
+                    style="@style/Widget.LesesoElectrical.TextInput"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Email Address" android:layout_marginBottom="12dp">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etCustomerEmail"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress" android:textColor="@color/text_light"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilCustomerPhone"
+                    style="@style/Widget.LesesoElectrical.TextInput"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Phone Number" android:layout_marginBottom="12dp">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etCustomerPhone"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:inputType="phone" android:textColor="@color/text_light"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilServiceAddress"
+                    style="@style/Widget.LesesoElectrical.TextInput"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="@string/service_address" android:layout_marginBottom="12dp">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etServiceAddress"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:inputType="textPostalAddress" android:textColor="@color/text_light"
+                        android:minLines="2"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilPreferredDate"
+                    style="@style/Widget.LesesoElectrical.TextInput"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="@string/preferred_date" android:layout_marginBottom="12dp"
+                    app:endIconMode="custom" app:endIconDrawable="@drawable/ic_calendar"
+                    app:endIconTint="@color/accent_purple">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPreferredDate"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:focusable="false" android:clickable="true"
+                        android:textColor="@color/text_light"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilPreferredTime"
+                    style="@style/Widget.LesesoElectrical.TextInput"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="@string/preferred_time" android:layout_marginBottom="12dp"
+                    app:endIconMode="custom" app:endIconDrawable="@drawable/ic_clock"
+                    app:endIconTint="@color/accent_purple">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPreferredTime"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:focusable="false" android:clickable="true"
+                        android:textColor="@color/text_light"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilNotes"
+                    style="@style/Widget.LesesoElectrical.TextInput"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="@string/additional_notes">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etNotes"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:inputType="textMultiLine" android:minLines="3"
+                        android:textColor="@color/text_light"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- ── STEP 3: Confirmation ── -->
+            <LinearLayout android:id="@+id/layoutStep3"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:visibility="gone">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Confirm Your Booking" android:textSize="14sp"
+                    android:textStyle="bold" android:textColor="@color/text_light"
+                    android:layout_marginBottom="16dp"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.LesesoElectrical.Card"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="16dp">
+
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="SERVICE" android:textColor="@color/accent_orange"
+                            android:textSize="11sp" android:letterSpacing="0.1"/>
+                        <TextView android:id="@+id/tvConfirmService"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:textColor="@color/text_light" android:textSize="15sp"
+                            android:textStyle="bold" android:layout_marginBottom="12dp"/>
+
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="NAME" android:textColor="@color/accent_orange"
+                            android:textSize="11sp" android:letterSpacing="0.1"/>
+                        <TextView android:id="@+id/tvConfirmName"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:textColor="@color/text_light" android:textSize="14sp"
+                            android:layout_marginBottom="12dp"/>
+
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="ADDRESS" android:textColor="@color/accent_orange"
+                            android:textSize="11sp" android:letterSpacing="0.1"/>
+                        <TextView android:id="@+id/tvConfirmAddress"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:textColor="@color/text_light" android:textSize="14sp"
+                            android:layout_marginBottom="12dp"/>
+
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="DATE &amp; TIME" android:textColor="@color/accent_orange"
+                            android:textSize="11sp" android:letterSpacing="0.1"/>
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView android:id="@+id/tvConfirmDate"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:textColor="@color/text_light" android:textSize="14sp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="  at  " android:textColor="@color/text_muted" android:textSize="14sp"/>
+                            <TextView android:id="@+id/tvConfirmTime"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:textColor="@color/text_light" android:textSize="14sp"/>
+                        </LinearLayout>
+
+                        <!-- Hidden fields for compact confirm layout -->
+                        <TextView android:id="@+id/tvConfirmEmail" android:visibility="gone"
+                            android:layout_width="0dp" android:layout_height="0dp"/>
+                        <TextView android:id="@+id/tvConfirmPhone" android:visibility="gone"
+                            android:layout_width="0dp" android:layout_height="0dp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Navigation buttons -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="24dp">
+
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnBack"
+                    style="@style/Widget.LesesoElectrical.Button.Outlined"
+                    android:layout_width="0dp" android:layout_height="56dp"
+                    android:layout_weight="1" android:text="Back" android:visibility="gone"
+                    android:layout_marginEnd="8dp"/>
+
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnNext"
+                    style="@style/Widget.LesesoElectrical.Button.Primary"
+                    android:layout_width="0dp" android:layout_height="56dp"
+                    android:layout_weight="1" android:text="Next"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- SUCCESS STATE -->
+        <LinearLayout android:id="@+id/layoutSuccess"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center"
+            android:padding="32dp" android:visibility="gone">
+
+            <ImageView android:layout_width="80dp" android:layout_height="80dp"
+                android:src="@drawable/ic_check_circle" android:layout_marginBottom="16dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/booking_success" android:textSize="24sp"
+                android:textStyle="bold" android:textColor="@color/success_green"
+                android:gravity="center" android:layout_marginBottom="8dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Booking Reference:" android:textColor="@color/text_muted"
+                android:textSize="13sp" android:layout_marginBottom="4dp"/>
+
+            <TextView android:id="@+id/tvBookingRef"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="LES-001" android:textSize="28sp" android:textStyle="bold"
+                android:textColor="@color/accent_purple" android:layout_marginBottom="16dp"/>
+
+            <TextView android:id="@+id/tvSuccessService"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textColor="@color/text_light" android:textSize="16sp"
+                android:gravity="center" android:layout_marginBottom="8dp"/>
+
+            <TextView android:id="@+id/tvSuccessDate"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textColor="@color/text_muted" android:textSize="14sp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <ProgressBar android:id="@+id/progressBar"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:visibility="gone"
+            android:indeterminateTint="@color/primary" android:layout_margin="16dp"/>
+
+        <Space android:layout_width="match_parent" android:layout_height="80dp"/>
+    </LinearLayout>
+</ScrollView>
