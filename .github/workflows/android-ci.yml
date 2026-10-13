@@ -24,13 +24,7 @@ jobs:
           distribution: temurin
           java-version: '17'
           cache: gradle
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-        with:
-          cmdline-tools-version: 'latest'
-          packages: ''
-  
-
+          
       - name: Restore Firebase configuration
         env:
           FIREBASE_CONFIG: ${{ secrets.GOOGLE_SERVICES_JSON_BASE64 }}
