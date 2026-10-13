@@ -34,6 +34,10 @@ jobs:
             exit 1
           fi
           printf '%s' "$FIREBASE_CONFIG" | base64 --decode > app/google-services.json
+             
+          python3 -m json.tool app/google-services.json > /dev/null
+
+          echo "Firebase configuration restored successfully"
 
       - name: Grant Gradle permission
         run: chmod +x ./gradlew
