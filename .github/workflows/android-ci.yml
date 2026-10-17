@@ -45,5 +45,5 @@ jobs:
       - name: Run automated unit tests
         run: ./gradlew :app:testDebugUnitTest --stacktrace
 
-      - name: Build debug APK
-        run: ./gradlew :app:assembleDebug --stacktrace
+      - name: Run automated unit tests
+       run: ./gradlew :app:testDebugUnitTest --stacktrace --info --console=plain
